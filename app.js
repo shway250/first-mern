@@ -9,7 +9,6 @@ var mongoose = require('mongoose');
 //models and route requirements
 var Job = require('./models/job');
 var index = require('./routes/index');
-var animals = require('./routes/animals');
 var jobs = require('./routes/jobs');
 
 var app = express();
@@ -26,7 +25,6 @@ mongoose.connect('mongodb://localhost/mern-backend');///change this line to chan
 
 //configure routes
 app.use('/', index);
-app.use('/animals', animals);
 app.use('/jobs', jobs);
 
 // catch 404 and forward to error handler
